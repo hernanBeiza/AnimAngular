@@ -1,0 +1,51 @@
+<div class="container">
+
+	<div class="row">
+		<div class="col">
+			<h1>Ejemplo básicos de animación</h1>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col">
+			<h3>Ejemplo básico de animación con Angular</h3>
+
+				<button class="btn btn-primary m-2" [disabled]="flagAnimaIN" (click)="animaIN();">Iniciar Animación de Entrada</button>
+				
+				<button class="btn btn-primary" [disabled]="!flagAnimaIN" (click)="animaOUT();">Iniciar Animación de Salida </button>
+
+			<p @fadeAnimation *ngIf="flagAnimaIN" class="alert alert-info">Animarme con entrada</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col">
+			<h3>Ejemplo sobre listas con Angular</h3>
+			<button class="btn btn-primary m-2" (click)="animaListaIN();">Iniciar Animación de items en lista</button>
+			
+			<ul [@listAnimation]="elementos.length">
+			  <li  *ngFor="let item of elementos" class="item">Elemento{{item}}</li>
+			</ul>
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col">
+			<h2>Ejemplo de animación sobre una lista con CSS y Angular</h2>
+			<ul>
+			  <li *ngFor="let item of estaticos" style="list-style-type: none; padding: 0px; margin: 0px;">
+			  	<div class="item-cargando" [ngStyle]="{'animation-delay': item*200 + 'ms'}">
+			  		<div class="circulo-contenedor">
+					  		<div class="circulo"></div>
+			  		</div>
+			  		<div class="linea-contenedor">
+				  		<div class="linea"></div>
+				  	</div>
+			  	</div>
+			  </li>
+			</ul>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,107 @@
+.item {
+	background-color: black;
+	color: white;
+}
+
+.item-cargando {
+  display: flex;
+  padding: 10px;
+
+	opacity: 0;
+	//animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+  -webkit-animation: fadeInFromNone 1s ease  infinite alternate;
+  -moz-animation: fadeInFromNone 1s ease infinite alternate;
+  -o-animation: fadeInFromNone 1s ease infinite alternate;
+  animation: fadeInFromNone 1s ease infinite alternate;
+}
+
+.circulo-contenedor {
+	align-items: flex-start;
+}
+
+.linea-contenedor {
+	align-self:center;
+}
+
+.circulo {
+	border-radius:50%;
+	background-color:gray;
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
+}
+
+.linea {
+	border-radius:8px;
+	background-color: gray;
+	width: 200px;
+	height: 10px;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0.1;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0.1;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0.1;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0.1;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
